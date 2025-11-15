@@ -1,11 +1,198 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
   <title>Titanex</title>
+  <style>
+    body {
+      font-family: 'Tahoma', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f5f5f5;
+      color: #222;
+      direction: rtl;
+    }
+    header {
+      background-color: #111;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    .logo-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
+    }
+    .logo-img {
+      width: 50px;
+      height: 50px;
+    }
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 20px 0 0;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+    nav a {
+      color: #00d8ff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    section {
+      padding: 40px 20px;
+      max-width: 800px;
+      margin: auto;
+    }
+    .hero {
+      background-color: #e0f7fa;
+      text-align: center;
+    }
+    .about-img, .distribution-img {
+      width: 100%;
+      max-width: 600px;
+      display: block;
+      margin: 20px auto;
+      border-radius: 10px;
+    }
+    .doc-list {
+      list-style: none;
+      padding: 0;
+    }
+    .doc-list li {
+      margin: 10px 0;
+    }
+    .cta {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #00d8ff;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+    .contact-form input, .contact-form textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    .contact-form button {
+      background-color: #00d8ff;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+    }
+    #contact-info {
+      display: none;
+    }
+  </style>
 </head>
 <body>
-  <h1>مرحبًا بك في Titanex</h1>
-  <p>العدالة الرقمية تبدأ من هنا.</p>
+
+  <header>
+    <div class="logo-container">
+      <img src="/attachments/KzqV7gBkYizet5uPq2VJN.png" alt="شعار Titanex" class="logo-img">
+      <h1>Titanex</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="https://codepen.io/Lop-Lop-the-solid/full/emZZavY" target="_blank">الرؤية</a></li>
+        <li><a href="https://codepen.io/Lop-Lop-the-solid/full/ogxgRem" target="_blank">من نحن</a></li>
+        <li><a href="https://codepen.io/Lop-Lop-the-solid/full/zxqYZQj" target="_blank">التوزيع</a></li>
+        <li><a href="#">الوثائق</a></li>
+        <li><a href="#">اتصل بنا</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>العدالة تبدأ من هنا</h2>
+    <p>مشروع رقمي مستقل يعيد توزيع القوة والفرص</p>
+    <a href="https://codepen.io/Lop-Lop-the-solid/full/ogxgRem" class="cta" target="_blank">اكتشف المشروع</a>
+  </section>
+
+  <section id="vision">
+    <h2>الرؤية</h2>
+    <p>
+      Titanex وُلد من الرفض، ليكون رمًزا للعدالة الرقمية.  
+      رؤيتنا هي إعادة توزيع الرموز، الفرص، والثقة — من العراق إلى العالم.  
+      كل صفحة، كل زر، كل رمز... يحمل وعدًا.
+    </p>
+  </section>
+
+  <section class="about">
+    <h2>من نحن</h2>
+    <p>
+      Titanex هو مشروع رقمي مستقل، وُلد من الحاجة إلى العدالة، والشفافية، وإعادة توزيع الرموز والفرص.  
+      نحن لا نبيع رموزًا، بل نعيد تعريفها.  
+      كل سطر كود، كل تصميم، كل قرار — يحمل معنى.
+    </p>
+    <img src="https://images.unsplash.com/photo-1605902711622-cfb43c4437d1" alt="رمز الحماية" class="about-img">
+  </section>
+
+  <section class="distribution">
+    <h2>التوزيع العادل</h2>
+    <p>
+      في Titanex، لا تُمنح الرموز عبثًا.  
+      نحن نكرّم الداعمين الأوائل، ونوزّع الفرص بشفافية، ونضمن أن كل رمز يصل لمن يستحقه.  
+      التوزيع ليس مجرد أرقام — إنه وعد بالعدالة.
+    </p>
+    <img src="https://images.unsplash.com/photo-1581090700227-1e7e8e1f3b6b" alt="رمز التوزيع" class="distribution-img">
+  </section>
+
+  <section class="documents">
+    <h2>الوثائق الرمزية</h2>
+    <p>
+      كل وثيقة في Titanex تحمل معنى.  
+      من العقود إلى التوزيع، من البريد إلى النطاق — كل خطوة موثقة، وكل رمز محفوظ.  
+      نحن نؤمن أن الشفافية هي أساس الثقة.
+    </p>
+    <ul class="doc-list">
+      <li><a href="#">وثيقة التوزيع العادل</a></li>
+      <li><a href="#">عقد المشروع الرمزي</a></li>
+      <li><a href="#">سجل الداعمين الأوائل</a></li>
+    </ul>
+  </section>
+
+  <section class="contact">
+    <h2>اتصل بنا</h2>
+    <p>نحن هنا لنستمع، ونعيد بناء الثقة.</p>
+    <button onclick="showContactInfo()">عرض معلومات التواصل</button>
+    <div id="contact-info" style="margin-top: 20px;">
+      <p><strong>البريد الرسمي:</strong> contact@titanex.live</p>
+      <p><strong>النطاق:</strong> www.titanex.live</p>
+      <p><strong>العراق — بغداد</strong></p>
+    </div>
+  </section>
+
+  <section class="contact-form">
+    <h3>أرسل لنا رسالة رمزية</h3>
+    <form onsubmit="handleSubmit(event)">
+      <input type="text" placeholder="اسمك الرمزي" required>
+      <input type="email" placeholder="بريدك الإلكتروني" required>
+      <textarea placeholder="رسالتك الرمزية" required></textarea>
+      <button type="submit">إرسال</button>
+    </form>
+    <p id="confirmation" style="display: none; margin-top: 20px; color: #00d8ff;">تم إرسال رسالتك الرمزية بنجاح!</p>
+  </section>
+
+  <p class="tagline">رمزٌ للحماية، وعُد بالعدالة، وولادةٌ رقمية من قلب العراق</p>
+
+  <script>
+    function showContactInfo() {
+      document.getElementById('contact-info').style.display = 'block';
+    }
+    function handleSubmit(event) {
+      event.preventDefault();
+      document.getElementById('confirmation').style.display = 'block';
+    }
+  </script>
+
 </body>
 </html>
