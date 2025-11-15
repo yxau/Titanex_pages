@@ -5,96 +5,174 @@
   <title>Titanex</title>
   <style>
     body {
-      font-family: 'Tahoma', sans-serif;
+      font-family: 'Cairo', sans-serif;
+      font-size: 18px;
+      line-height: 1.8;
+      color: #f0f0f0;
+      background-color: #0f1c2e;
       margin: 0;
       padding: 0;
-      background-color: #f5f5f5;
-      color: #222;
-      direction: rtl;
-    }
-    header {
-      background-color: #111;
-      color: #fff;
-      padding: 20px;
       text-align: center;
     }
+
+    header {
+      background-color: #111;
+      padding: 20px;
+    }
+
     .logo-container {
       display: flex;
       align-items: center;
       justify-content: center;
       gap: 15px;
+      margin-bottom: 10px;
+      text-align: center;
+      padding: 30px 0;
     }
+
     .logo-img {
-      width: 50px;
-      height: 50px;
+      width: 120px;
+      height: 120px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px #00d8ff;
     }
+
     nav ul {
       list-style: none;
       padding: 0;
-      margin: 20px 0 0;
+      margin: 0;
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
       gap: 15px;
     }
-    nav a {
+
+    nav ul li {
+      display: inline-block;
+    }
+
+    nav ul li a {
       color: #00d8ff;
       text-decoration: none;
       font-weight: bold;
     }
-    section {
-      padding: 40px 20px;
-      max-width: 800px;
-      margin: auto;
-    }
+
     .hero {
-      background-color: #e0f7fa;
-      text-align: center;
+      padding: 50px 20px;
+      background-image: url('https://images.unsplash.com/photo-1605902711622-cfb43c4437d1');
+      background-size: cover;
+      background-position: center;
+      border-top: 2px solid #00d8ff;
+      border-bottom: 2px solid #00d8ff;
     }
-    .about-img, .distribution-img {
-      width: 100%;
-      max-width: 600px;
-      display: block;
-      margin: 20px auto;
-      border-radius: 10px;
-    }
-    .doc-list {
-      list-style: none;
-      padding: 0;
-    }
-    .doc-list li {
-      margin: 10px 0;
-    }
+
     .cta {
       display: inline-block;
       margin-top: 20px;
       padding: 10px 20px;
       background-color: #00d8ff;
-      color: #fff;
+      color: #000;
       text-decoration: none;
       border-radius: 5px;
+      font-weight: bold;
     }
-    .contact-form input, .contact-form textarea {
-      width: 100%;
-      padding: 10px;
+
+    section {
+      padding: 40px 20px;
+    }
+
+    .about, .distribution, .documents, .contact, .contact-form {
+      border-top: 2px solid #00d8ff;
+      border-bottom: 2px solid #00d8ff;
+    }
+
+    .about { background-color: #1a1a1a; }
+    .distribution { background-color: #0f1c2e; }
+    .documents { background-color: #14213d; }
+    .contact { background-color: #1b1b1b; }
+    .contact-form { background-color: #111; }
+
+    h1, h2 {
+      font-weight: bold;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+      color: #00d8ff;
+    }
+
+    p {
+      margin: 20px auto;
+      max-width: 700px;
+      font-size: 18px;
+      color: #e0e0e0;
+    }
+
+    .about-img, .distribution-img {
+      margin-top: 30px;
+      max-width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #00d8ff;
+      filter: drop-shadow(0 0 6px rgba(0, 0, 0, 0.3));
+    }
+
+    .doc-list {
+      list-style: none;
+      padding: 0;
+      margin-top: 30px;
+    }
+
+    .doc-list li {
       margin: 10px 0;
-      border: 1px solid #ccc;
-      border-radius: 5px;
     }
-    .contact-form button {
-      background-color: #00d8ff;
-      color: #fff;
-      padding: 10px 20px;
+
+    .doc-list a {
+      color: #00d8ff;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 16px;
+    }
+
+    button, .contact-form button {
+      background-color: #1e3a5f;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      font-size: 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: transform 0.3s ease, background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #2c4d75;
+      transform: scale(1.05);
+    }
+
+    .contact-form form {
+      max-width: 500px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      margin-bottom: 15px;
+      padding: 10px;
       border: none;
       border-radius: 5px;
+      font-size: 16px;
     }
-    #contact-info {
-      display: none;
+
+    .tagline {
+      font-size: 16px;
+      color: #00d8ff;
+      margin-top: 5px;
+      font-style: italic;
     }
   </style>
 </head>
 <body>
 
+  <!-- HEADER -->
   <header>
     <div class="logo-container">
       <img src="/attachments/KzqV7gBkYizet5uPq2VJN.png" alt="شعار Titanex" class="logo-img">
@@ -102,7 +180,7 @@
     </div>
     <nav>
       <ul>
-        <li><a href="https://codepen.io/Lop-Lop-the-solid/full/emZZavY" target="_blank">الرؤية</a></li>
+        <li><a href="https://codepen.io/Lop-Lop-the-solid/full/ogxgRem" target="_blank">الرؤية</a></li>
         <li><a href="https://codepen.io/Lop-Lop-the-solid/full/ogxgRem" target="_blank">من نحن</a></li>
         <li><a href="https://codepen.io/Lop-Lop-the-solid/full/zxqYZQj" target="_blank">التوزيع</a></li>
         <li><a href="#">الوثائق</a></li>
@@ -111,18 +189,20 @@
     </nav>
   </header>
 
+  <!-- HERO -->
   <section class="hero">
     <h2>العدالة تبدأ من هنا</h2>
     <p>مشروع رقمي مستقل يعيد توزيع القوة والفرص</p>
     <a href="https://codepen.io/Lop-Lop-the-solid/full/ogxgRem" class="cta" target="_blank">اكتشف المشروع</a>
   </section>
 
+  <!-- CONTENT SECTIONS -->
   <section id="vision">
     <h2>الرؤية</h2>
     <p>
-      Titanex وُلد من الرفض، ليكون رمًزا للعدالة الرقمية.  
+      Titanex وُلد من الرفض، ليكون رمزًا للعدالة الرقمية.  
       رؤيتنا هي إعادة توزيع الرموز، الفرص، والثقة — من العراق إلى العالم.  
-      كل صفحة، كل زر، كل رمز... يحمل وعدًا.
+      كل صفحة، كل زر، كل رمز… يحمل وعدًا.
     </p>
   </section>
 
@@ -154,45 +234,13 @@
       نحن نؤمن أن الشفافية هي أساس الثقة.
     </p>
     <ul class="doc-list">
-      <li><a href="#">وثيقة التوزيع العادل</a></li>
-      <li><a href="#">عقد المشروع الرمزي</a></li>
-      <li><a href="#">سجل الداعمين الأوائل</a></li>
+      <li><a href="#">📄 وثيقة التوزيع العادل</a></li>
+      <li><a href="#">📄 عقد المشروع الرمزي</a></li>
+      <li><a href="#">📄 سجل الداعمين الأوائل</a></li>
     </ul>
   </section>
 
   <section class="contact">
     <h2>اتصل بنا</h2>
     <p>نحن هنا لنستمع، ونعيد بناء الثقة.</p>
-    <button onclick="showContactInfo()">عرض معلومات التواصل</button>
-    <div id="contact-info" style="margin-top: 20px;">
-      <p><strong>البريد الرسمي:</strong> contact@titanex.live</p>
-      <p><strong>النطاق:</strong> www.titanex.live</p>
-      <p><strong>العراق — بغداد</strong></p>
-    </div>
-  </section>
-
-  <section class="contact-form">
-    <h3>أرسل لنا رسالة رمزية</h3>
-    <form onsubmit="handleSubmit(event)">
-      <input type="text" placeholder="اسمك الرمزي" required>
-      <input type="email" placeholder="بريدك الإلكتروني" required>
-      <textarea placeholder="رسالتك الرمزية" required></textarea>
-      <button type="submit">إرسال</button>
-    </form>
-    <p id="confirmation" style="display: none; margin-top: 20px; color: #00d8ff;">تم إرسال رسالتك الرمزية بنجاح!</p>
-  </section>
-
-  <p class="tagline">رمزٌ للحماية، وعُد بالعدالة، وولادةٌ رقمية من قلب العراق</p>
-
-  <script>
-    function showContactInfo() {
-      document.getElementById('contact-info').style.display = 'block';
-    }
-    function handleSubmit(event) {
-      event.preventDefault();
-      document.getElementById('confirmation').style.display = 'block';
-    }
-  </script>
-
-</body>
-</html>
+    <button onclick="show
